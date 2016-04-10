@@ -42,7 +42,7 @@
 		[btn setAttributedTitle: tag.attributedText forState: UIControlStateNormal];
 	} else {
         
-        NSString *text = tag.displaySigns ? [tag.text stringByAppendingString:@"     "] : tag.text;
+        NSString *text = tag.sign ? [tag.text stringByAppendingString:@"     "] : tag.text;
        
 		[btn setTitle: text forState:UIControlStateNormal];
 		[btn setTitleColor: tag.textColor forState: UIControlStateNormal];
@@ -65,12 +65,12 @@
         btn.layer.borderWidth = tag.borderWidth;
     }
     
-    if (tag.displaySigns) {
+    if (tag.sign) {
         UILabel *signLabel = [[UILabel alloc] init];
         
         signLabel.textColor = tag.textColor;
         signLabel.font = [UIFont systemFontOfSize:18];
-        signLabel.text = tag.enable ? @"+" : @"-";
+        signLabel.text = tag.sign;
         
         [btn addSubview:signLabel];
         

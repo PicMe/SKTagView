@@ -25,8 +25,8 @@
 @property (assign, nonatomic) CGFloat fontSize;
 ///default:YES
 @property (assign, nonatomic) BOOL enable;
-///defaults: NO
-@property (assign, nonatomic) BOOL displaySigns;
+
+@property (nonatomic, copy, nullable) NSString *sign;
 
 - (nonnull instancetype)initWithText: (nonnull NSString *)text;
 + (nonnull instancetype)tagWithText: (nonnull NSString *)text;
