@@ -68,7 +68,7 @@
     if (tag.displaySigns) {
         UILabel *signLabel = [[UILabel alloc] init];
         
-        signLabel.textColor = [UIColor whiteColor];
+        signLabel.textColor = tag.textColor;
         signLabel.font = [UIFont systemFontOfSize:18];
         signLabel.text = tag.enable ? @"+" : @"-";
         
