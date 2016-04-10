@@ -26,6 +26,8 @@
 ///default:YES
 @property (assign, nonatomic) BOOL enable;
 
+@property (nonatomic, copy, nullable) NSString *sign;
+
 - (nonnull instancetype)initWithText: (nonnull NSString *)text;
 + (nonnull instancetype)tagWithText: (nonnull NSString *)text;
 
